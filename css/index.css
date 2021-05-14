@@ -1,0 +1,218 @@
+@font-face {
+  font-family: robotoThin;
+  src: url('./fonts/Roboto-Thin.tff');
+}
+
+@font-face {
+  font-family: robotoRegular;
+  src: url('./fonts/Roboto-Regular.tff');
+}
+
+body, html {
+  height:100%;
+  margin:0;
+  color:#666;
+  font-family: robotoThin;
+  scroll-behavior: smooth;
+}
+
+/* Global Page Setup */
+
+.background, .intermediateBackground {
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+.background{
+  background-image:url('../img/bimg.png');
+  min-height:100%;
+}
+
+.intermediateBackground {
+  background-image: url('../img/bimgnew.png');
+  min-height: 20%;
+}
+
+.fixed-top {
+  transition: background-color 200ms linear;
+}
+
+.fixed-top.scrolled {
+  background-color: #000 !important;
+  transition: background-color 200ms linear;
+}
+
+.fixed-top.scrolled .nav-link {
+  color: #fff;
+}
+
+/* Navbar */
+.navbar-brand {
+  max-width: 15vw;
+  max-height: 5vh;
+}
+.navbar-image {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-link {
+  font-family: robotoThin;
+  font-size: 150%;
+}
+
+/* Main Frame text */
+.paraText{
+  position:absolute;
+  top:60%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px; /* Need to make responsive */
+  font-family: robotoRegular;
+}
+
+.paraText .paraBorder{
+  background-color: transparent;
+  color:#fff;
+  padding:20px; /* Need to make responsive */
+}
+
+.paraText .paraBorder .smallParaText {
+  font-size: 15px; /* Need to make responsive */
+  letter-spacing: 0.05em;
+  padding-top: 0.2%;
+}
+
+.social-links {
+  padding-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+/* Section Setup */
+.section {
+  text-align: center;
+  padding: 1% 1%;
+  min-height: 60%;
+  color: #000;
+}
+
+.section-content {
+  min-height: 45vh;
+}
+
+.section-dark {
+  background-color: #fff;
+  background-position: center;
+}
+
+.section-light {
+  background-color: #fff;
+}
+
+.section-title {
+  width: 100%;
+  height: 2%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: 1.7vw;
+  font-family: robotoRegular;
+}
+
+.section-text {
+  font-family: robotoThin;
+  font-size: 1vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Skillbars */
+.skillbar {
+  align-items: flex-end;
+  background-color: #C1CAD6;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  font-family: robotoRegular;
+}
+
+.skillbar .fill {
+  left: 0;
+  position: absolute;
+  background-color: #000;
+  opacity: 1;
+  padding: 0;
+  height: 100%;
+}
+
+.skillbar-row {
+  margin-top: 1%;
+}
+
+.skillbar .tag {
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  align-items: center;
+  width: 5vw;
+  background-color: #000;
+  color: #fff;
+  font-family: robotoRegular;
+}
+
+#skillbar-group {
+  margin-left: 5%;
+}
+
+/* Media Containers */
+.container {
+  padding-bottom: 2%;
+}
+
+#about-info {
+  margin-top: 5%;
+}
+
+.academic-group {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.academic-title {
+  padding-bottom: 0.6%;
+  font-family: robotoRegular;
+  text-align: center;
+}
+
+.academic-description {
+  text-align: center;
+  font-family: robotoThin;
+}
+
+/* Footer Setup */
+.footer {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+
+.footer-content {
+  text-align: right;
+  padding-right: 2%;
+}
+
+.text-muted {
+  font-family: robotoThin;
+  color: #000;
+}
