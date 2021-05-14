@@ -118,6 +118,14 @@ body, html {
   width: 20%;
 }
 
+.media-link {
+  transition: transform .2s;
+}
+
+.media-link:hover {
+  transform: scale(1.2);
+}
+
 /* Section Setup */
 .section {
   text-align: center;
