@@ -14,6 +14,7 @@ body, html {
   color:#666;
   font-family: robotoThin;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 /* Global Page Setup */
@@ -29,6 +30,7 @@ body, html {
 .background{
   background-image:url('../img/bimg.png');
   min-height:100%;
+  scroll-snap-align: start;
 }
 
 .intermediateBackground {
@@ -43,6 +45,7 @@ body, html {
 .fixed-top.scrolled {
   background-color: #000 !important;
   transition: background-color 200ms linear;
+  opacity: 0.7;
 }
 
 .fixed-top.scrolled .nav-link {
@@ -75,6 +78,28 @@ body, html {
   font-family: robotoRegular;
 }
 
+.typewriter {
+  max-width: 30vw;
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin 0 auto;
+  justify-content: center;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
 .paraText .paraBorder{
   background-color: transparent;
   color:#fff;
@@ -98,8 +123,10 @@ body, html {
 .section {
   text-align: center;
   padding: 1% 1%;
+  padding-top: 5vh;
   min-height: 60%;
   color: #000;
+  scroll-snap-align: start;
 }
 
 .section-content {
@@ -176,11 +203,16 @@ body, html {
 
 /* Media Containers */
 .container {
-  padding-bottom: 2%;
+  min-height: 100%;
 }
 
 #about-info {
   margin-top: 5%;
+}
+
+#profile-image {
+  max-width: 15vw;
+  max-height: 15vw;
 }
 
 .academic-group {
