@@ -24,49 +24,38 @@ body, html {
 
 /* Global Page Setup */
 
-.background, .intermediateBackground {
+.background {
   position:relative;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
-}
-
-.background{
-  background-image:url('../img/bimg.png');
-  min-height:100%;
+  background-image: url('../img/bimg.png');
+  min-height: 100%;
   scroll-snap-align: start;
 }
 
-.intermediateBackground {
-  background-image: url('../img/bimgnew.png');
-  min-height: 20%;
+.highlighted { /* For text to be highlighted as bold */
+  font-family: quicksandSemiBold;
 }
+
+/* Navbar */
 
 .fixed-top {
   color: #fff;
   transition: color 100ms linear;
 }
 
-.fixed-top.scrolled {
+.fixed-top.scrolled { /* Change colour of navbar text when on white bg */
   color: #000 !important;
   transition: color 100ms linear;
   opacity: 0.7;
 }
 
-/* Navbar */
 .navbar-brand {
   font-family: quicksandLight;
   font-size: 200% !important;
   color: inherit !important;
-}
-
-.navbar-toggler {
-  color: inherit !important;
-}
-
-.highlighted {
-  font-family: quicksandSemiBold;
 }
 
 .nav-link {
@@ -82,7 +71,7 @@ body, html {
   width:100%;
   text-align:center;
   color:#000;
-  font-size:27px; /* Need to make responsive */
+  font-size:2.5vw; /* Need to make responsive */
   font-family: quicksandRegular;
 }
 
@@ -91,9 +80,12 @@ body, html {
   border-right: .15em solid white;
   white-space: nowrap;
   margin 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
   justify-content: center;
   animation:
-    typing 3.5s steps(20, end),
+    typing 6s steps(60, end),
     blink-caret .75s step-end infinite;
 }
 
@@ -114,7 +106,7 @@ body, html {
 }
 
 .paraText .paraBorder .smallParaText {
-  font-size: 15px; /* Need to make responsive */
+  font-size: 1.5vw; /* Need to make responsive */
   letter-spacing: 0.05em;
   padding-top: 0.2%;
 }
@@ -254,4 +246,19 @@ body, html {
 .text-muted {
   font-family: quicksandLight;
   color: #000;
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) { /* Smart phone devices */
+  .paraText {
+    font-size: 2.5vh;
+  }
+
+  .smallParaText {
+    font-size: 1vh !important;
+  }
+
+  .social-links {
+    visibility: hidden;
+  }
 }
