@@ -17,7 +17,7 @@ body, html {
   height:100%;
   margin:0;
   color:#666;
-  font-family: quicksandRegular;
+  font-family: quicksandRegular !important;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
@@ -133,20 +133,8 @@ body, html {
   padding-top: 5vh;
   min-height: 100%;
   color: #000;
+  background-color: #fff;
   scroll-snap-align: start;
-}
-
-.section-content {
-  min-height: 45vh;
-}
-
-.section-dark {
-  background-color: #fff;
-  background-position: center;
-}
-
-.section-light {
-  background-color: #fff;
 }
 
 .section-title {
@@ -155,16 +143,19 @@ body, html {
   margin-top: 2%;
   margin-bottom: 5%;
   text-align: center;
-  font-size: 1.7vw;
-  font-family: quicksandRegular;
+  font-size: 2vw;
+  font-family: quicksandSemiBold;
 }
 
 .section-text {
-  font-family: quicksandLight;
   font-size: 1vw;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* About Section */
+
 
 /* Skillbars */
 .skillbar {
@@ -223,15 +214,17 @@ body, html {
 }
 
 .academic-group {
+  margin-left: auto !important;
+  margin-right: auto !important;
   text-align: center;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .academic-title {
   padding-bottom: 0.6%;
-  font-family: quicksandRegular;
   text-align: center;
+  width: 100%;
 }
 
 .academic-description {
@@ -268,5 +261,19 @@ body, html {
 
   .social-links {
     visibility: hidden;
+  }
+
+  .section-title {
+    font-size: 2.5vh;
+  }
+
+  .section-text {
+    padding-top: 3vh;
+    font-size: 1.5vh;
+  }
+
+  #profile-image {
+    max-width: 15vh;
+    max-height: 15vh;
   }
 }
