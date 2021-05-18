@@ -6,6 +6,6 @@ $(function () {
   $(document).scroll(function () {
 	  var $nav = $(".fixed-top");
     var $backgroundimg = $(".background");
-	  $nav.toggleClass('scrolled', $(this).scrollTop() > $backgroundimg.height());
+	  $nav.toggleClass('scrolled', $(this).scrollTop() >= $backgroundimg.height()-50);
 	});
 });

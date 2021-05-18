@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="./css/index.css" type="text/css">
 
   <!-- favicon setup -->
-  <link rel="icon" type="images/png" href="./img/favicon-16.png" sizes="16x16">
-  <link rel="icon" type="images/png" href="./img/favicon-32.png" sizes="32x32">
-  <link rel="icon" type="images/png" href="./img/favicon-92.png" sizes="92x92">
+  <link rel="icon" type="images/png" href="./img/favicon/favicon-16.png" sizes="16x16">
+  <link rel="icon" type="images/png" href="./img/favicon/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="images/png" href="./img/favicon/favicon-92.png" sizes="92x92">
 
   <!-- Bootstrap img -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -30,7 +30,9 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark indigo fixed-top" id="navbar-spy">
-    <a class="navbar-brand" href="#"><img class="navbar-image" src="./img/logo.png"></a>
+    <a class="navbar-brand" href="#">
+      Matthew <span class="highlighted">Wright</span>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -46,7 +48,7 @@
           <a class="nav-link" href="https://instagram.mdwright.net/">Photography</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="mailto:Matthew@MDwright.net">Contact</a>
+          <a class="nav-link" href="mailto:Matthew@mdwright.net">Contact</a>
         </li>
       </ul>
     </div>
@@ -55,22 +57,24 @@
   <div class="background">
     <div class="paraText">
       <span class="paraBorder">
-        Hello, I'm Matthew Wright
+        <div class="typewriter">
+         Hello, I'm <span class="highlighted">Matthew Wright</span>
+      </div>
         <div class="smallParaText">
           A Computer Science student at Royal Holloway, University of London
         </div>
         <div class="social-links">
           <div class="social-links-inner">
-            <a href="https://linkedin.mdwright.net/"><img id="linkedinLogo" src="./img/linkedin.png"></a>
-            <a href="https://instagram.mdwright.net/"><img src="./img/instagram.png"></a>
-            <a href="https://github.mdwright.net/"><img id="gitLogo" src="./img/git.png"></a>
+            <a href="https://linkedin.mdwright.net/" class="grow"><img src="./img/linkedin.png" class="media-link"></a>
+            <a href="https://instagram.mdwright.net/" class="grow"><img src="./img/instagram.png" class="media-link"></a>
+            <a href="https://github.mdwright.net/" class="grow"><img src="./img/git.png" class="media-link"></a>
           </div>
         </div>
       </span>
     </div>
   </div>
 
-  <div class="section section-light" id="about">
+  <div class="section" id="about">
     <div class="container">
       <div class="row">
         <h3 class="section-title">
@@ -79,92 +83,48 @@
       </div>
 
       <div class="row">
-        <p class="section-text">
-          I'm a 3rd year Computer Science student based in Egham, Surrey with a keen interest in
-          <br>
-          Software Engineering & Development specifically within the financial context.
-        </p>
+        <div class="col-sm-4">
+          <img src="./img/profile_image_square.jpg" class="rounded-circle img-fluid" id="profile-image">
+        </div>
+        <div class="col-sm-8 text-wrap section-text">
+            <p>
+              A third culture kid who grew up in Singapore, I have a keen interest in software engineering & development.
+              Currently an up and coming graduate with a BSc in Computer Science with Artificial Intelligence I am particularly
+              drawn to financial technology and the use of modern technology to empower data.
+            </p>
+        </div>
       </div>
 
       <div class="row" id="about-info">
-        <div class="col-sm">
-          <div class="row academic-group">
-            <div class="academic-title">
-              Royal Holloway, University of London
-            </div>
-
-            <div class="academic-description">
-              BSc Computer Science with Artificial Intelligence
-            </div>
+        <div class="row academic-group">
+          <div class="academic-title">
+            Royal Holloway, University of London
           </div>
 
-          <div class="row academic-group">
-            <div class="academic-title">
-              Guildford County School, Surrey
-            </div>
-
-            <div class="academic-description">
-              A-level Computer Science, Economics, Physics
-              <br>
-              AS-level Mathematics
-            </div>
+          <div class="academic-description">
+            BSc Computer Science with Artificial Intelligence
           </div>
         </div>
 
-        <div class="col-sm" id="skillbar-group">
-          <div class="row">
-            <div class="skillbar">
-              <div class="skillbar fill" style="width: 90%">
-                <div class="skillbar tag">
-                  Java
-                </div>
-              </div>
-              90%
-            </div>
+        <div class="row academic-group">
+          <div class="academic-title">
+            Guildford County School, Surrey
           </div>
 
-          <div class="row skillbar-row">
-            <div class="skillbar">
-              <div class="skillbar fill" style="width: 60%">
-                <div class="skillbar tag">
-                  HTML
-                </div>
-              </div>
-              60%
-            </div>
+          <div class="academic-description">
+            A-Levels in Computer Science, Economics & Physics
+            <br>
+            AS-Level in Mathematics
+          </div>
+        </div>
+
+        <div class="row academic-group">
+          <div class="academic-title">
+            Tanglin Trust School, Singapore
           </div>
 
-          <div class="row skillbar-row">
-            <div class="skillbar">
-              <div class="skillbar fill" style="width: 60%">
-                <div class="skillbar tag">
-                  CSS
-                </div>
-              </div>
-              60%
-            </div>
-          </div>
-
-          <div class="row skillbar-row">
-            <div class="skillbar">
-              <div class="skillbar fill" style="width: 50%">
-                <div class="skillbar tag">
-                  Python
-                </div>
-              </div>
-              50%
-            </div>
-          </div>
-
-          <div class="row skillbar-row">
-            <div class="skillbar">
-              <div class="skillbar fill" style="width: 40%">
-                <div class="skillbar tag">
-                  C
-                </div>
-              </div>
-              40%
-            </div>
+          <div class="academic-description">
+            Formative education following the British curriculum
           </div>
         </div>
       </div>
@@ -172,13 +132,21 @@
     </div>
   </div>
 
-  <div class="section section-dark">
+  <div class="section" id="work">
+    <div class="container">
+      <div class="row">
+        <h3 class="section-title">
+          My Work
+        </h3>
+      </div>
 
+      <!-- stuff -->
+    </div>
   </div>
 
     <footer class="footer">
       <div class="footer-content">
-        <p class="text-muted">Background & Website Copyright © Matthew David Wright 2021</p>
+        <p class="text-muted">Background & Website Copyright © Matthew Wright 2021</p>
       </div>
     </footer>
 </body>

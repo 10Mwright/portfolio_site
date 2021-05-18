@@ -1,67 +1,67 @@
 @font-face {
-  font-family: robotoThin;
-  src: url('./fonts/Roboto-Thin.tff');
+  font-family: quicksandLight;
+  src: url('../fonts/Quicksand-Light.ttf');
 }
 
 @font-face {
-  font-family: robotoRegular;
-  src: url('./fonts/Roboto-Regular.tff');
+  font-family: quicksandRegular;
+  src: url('../fonts/Quicksand-Regular.ttf');
+}
+
+@font-face {
+  font-family: quicksandSemiBold;
+  src: url('../fonts/Quicksand-SemiBold.ttf');
 }
 
 body, html {
   height:100%;
   margin:0;
   color:#666;
-  font-family: robotoThin;
+  font-family: quicksandRegular !important;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 /* Global Page Setup */
 
-.background, .intermediateBackground {
+.background {
   position:relative;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
+  background-image: url('../img/bimg.png');
+  min-height: 100%;
+  scroll-snap-align: start;
 }
 
-.background{
-  background-image:url('../img/bimg.png');
-  min-height:100%;
-}
-
-.intermediateBackground {
-  background-image: url('../img/bimgnew.png');
-  min-height: 20%;
-}
-
-.fixed-top {
-  transition: background-color 200ms linear;
-}
-
-.fixed-top.scrolled {
-  background-color: #000 !important;
-  transition: background-color 200ms linear;
-}
-
-.fixed-top.scrolled .nav-link {
-  color: #fff;
+.highlighted { /* For text to be highlighted as bold */
+  font-family: quicksandSemiBold;
 }
 
 /* Navbar */
-.navbar-brand {
-  max-width: 15vw;
-  max-height: 5vh;
+
+.fixed-top {
+  color: #fff;
+  transition: color 100ms linear;
 }
-.navbar-image {
-  width: 100%;
-  height: 100%;
+
+.fixed-top.scrolled { /* Change colour of navbar text when on white bg */
+  color: #000 !important;
+  transition: color 100ms linear;
+  opacity: 0.7;
+}
+
+.navbar-brand {
+  font-family: quicksandLight;
+  font-size: 200% !important;
+  color: inherit !important;
 }
 
 .nav-link {
-  font-family: robotoThin;
+  font-family: quicksandLight;
   font-size: 150%;
+  color: inherit !important;
 }
 
 /* Main Frame text */
@@ -71,8 +71,32 @@ body, html {
   width:100%;
   text-align:center;
   color:#000;
-  font-size:27px; /* Need to make responsive */
-  font-family: robotoRegular;
+  font-size:2.5vw; /* Need to make responsive */
+  font-family: quicksandRegular;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  justify-content: center;
+  animation:
+    typing 6s steps(60, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
 }
 
 .paraText .paraBorder{
@@ -82,7 +106,7 @@ body, html {
 }
 
 .paraText .paraBorder .smallParaText {
-  font-size: 15px; /* Need to make responsive */
+  font-size: 1.5vw; /* Need to make responsive */
   letter-spacing: 0.05em;
   padding-top: 0.2%;
 }
@@ -94,25 +118,23 @@ body, html {
   width: 20%;
 }
 
+.media-link {
+  transition: transform .2s;
+}
+
+.media-link:hover {
+  transform: scale(1.2);
+}
+
 /* Section Setup */
 .section {
   text-align: center;
   padding: 1% 1%;
-  min-height: 60%;
+  padding-top: 5vh;
+  min-height: 100%;
   color: #000;
-}
-
-.section-content {
-  min-height: 45vh;
-}
-
-.section-dark {
   background-color: #fff;
-  background-position: center;
-}
-
-.section-light {
-  background-color: #fff;
+  scroll-snap-align: start;
 }
 
 .section-title {
@@ -121,16 +143,19 @@ body, html {
   margin-top: 2%;
   margin-bottom: 5%;
   text-align: center;
-  font-size: 1.7vw;
-  font-family: robotoRegular;
+  font-size: 2vw;
+  font-family: quicksandSemiBold;
 }
 
 .section-text {
-  font-family: robotoThin;
   font-size: 1vw;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* About Section */
+
 
 /* Skillbars */
 .skillbar {
@@ -142,7 +167,7 @@ body, html {
   flex-direction: column;
   justify-content: center;
   width: 80%;
-  font-family: robotoRegular;
+  font-family: quicksandLight;
 }
 
 .skillbar .fill {
@@ -167,7 +192,7 @@ body, html {
   width: 5vw;
   background-color: #000;
   color: #fff;
-  font-family: robotoRegular;
+  font-family: quicksandRegular;
 }
 
 #skillbar-group {
@@ -176,28 +201,35 @@ body, html {
 
 /* Media Containers */
 .container {
-  padding-bottom: 2%;
+  min-height: 100%;
 }
 
 #about-info {
   margin-top: 5%;
 }
 
+#profile-image {
+  max-width: 15vw;
+  max-height: 15vw;
+}
+
 .academic-group {
+  margin-left: auto !important;
+  margin-right: auto !important;
   text-align: center;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .academic-title {
   padding-bottom: 0.6%;
-  font-family: robotoRegular;
   text-align: center;
+  width: 100%;
 }
 
 .academic-description {
   text-align: center;
-  font-family: robotoThin;
+  font-family: quicksandLight;
 }
 
 /* Footer Setup */
@@ -213,6 +245,35 @@ body, html {
 }
 
 .text-muted {
-  font-family: robotoThin;
+  font-family: quicksandLight;
   color: #000;
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) { /* Smart phone devices */
+  .paraText {
+    font-size: 2.5vh;
+  }
+
+  .smallParaText {
+    font-size: 1vh !important;
+  }
+
+  .social-links {
+    visibility: hidden;
+  }
+
+  .section-title {
+    font-size: 2.5vh;
+  }
+
+  .section-text {
+    padding-top: 3vh;
+    font-size: 1.5vh;
+  }
+
+  #profile-image {
+    max-width: 15vh;
+    max-height: 15vh;
+  }
 }
