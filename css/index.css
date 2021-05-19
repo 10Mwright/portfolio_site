@@ -232,6 +232,16 @@ body, html {
   font-family: quicksandLight;
 }
 
+/* Work Section */
+.work-row {
+  width: 100%;
+}
+
+.work-card {
+  height: 15vw;
+  width: 15vw;
+}
+
 /* Footer Setup */
 .footer {
   position: absolute;
