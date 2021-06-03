@@ -235,12 +235,15 @@ body, html {
 /* Work Section */
 .work-row {
   width: 100%;
-  padding-top: 2%;
 }
 
 .work-card {
-  height: 15vw;
-  width: 15vw;
+  width: 18vw;
+}
+
+.btn-work {
+  background-color: #000;
+  color: #fff;
 }
 
 /* Footer Setup */
